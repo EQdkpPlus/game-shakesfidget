@@ -23,20 +23,52 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('shakesfidget')) {
 	class shakesfidget extends game_generic {
-		public static $shortcuts = array();
+		public $version			= '2.1';
 		protected $this_game	= 'shakesfidget';
 		protected $types		= array('classes', 'races', 'filters');
-		public $icons			= array('classes', 'classes_big', 'events', 'races');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $filters		= array();
 		public $langs			= array('english', 'german');
 
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'race',
+				'type'		=> 'races',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'parent'	=> false
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> array(
+					'race' => array(
+						0 	=> 'all',		// Unknown
+						1 	=> 'all',		// Human
+						2 	=> 'all',		// Elf
+						3 	=> 'all',		// Dwarf
+						4 	=> 'all',		// Gnome
+						5 	=> 'all',		// Orcs
+						6 	=> 'all',		// Dark Elf
+						7 	=> 'all',		// Goblin
+						8	=> 'all'		// Demon
+					),
+				),
+			),
+		);
+
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= '';
 		public $lang			= false;
-		public $version			= '2.1';
+		
 
 		/**
 		* Initialises filters
@@ -56,6 +88,28 @@ if(!class_exists('shakesfidget')) {
 			}
 		}
 
+		public function profilefields(){
+			$xml_fields = array(
+				'gender'	=> array(
+					'type'			=> 'dropdown',
+					'category'		=> 'character',
+					'lang'			=> 'uc_gender',
+					'options'		=> array('Male' => 'uc_male', 'Female' => 'uc_female'),
+					'undeletable'	=> true,
+					'visible'		=> true
+				),
+				'guild'	=> array(
+					'type'			=> 'text',
+					'category'		=> 'character',
+					'lang'			=> 'uc_guild',
+					'size'			=> 40,
+					'undeletable'	=> true,
+					'visible'		=> true	
+				),
+			);
+			return $xml_fields;
+		}
+
 		/**
 		* Returns Information to change the game
 		*
@@ -73,5 +127,4 @@ if(!class_exists('shakesfidget')) {
 		}
 	}
 }
-if(version_compare(PHP_VERSION, '5.3.0', '<')) registry::add_const('short_shakesfidget', shakesfidget::$shortcuts);
 ?>

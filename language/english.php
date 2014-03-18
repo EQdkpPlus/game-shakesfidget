@@ -6,32 +6,30 @@ if ( !defined('EQDKP_INC') ){
 }
 $english_array = array(
 	'classes' => array(
-		0 => 'Unknown',
-		1 => 'Mage',
-		2 => 'Scout',
-		3 => 'Warrior',
+		0	=> 'Unknown',
+		1	=> 'Mage',
+		2	=> 'Scout',
+		3	=> 'Warrior',
 	),
 	'races' => array(
-		'Human',
-		'Elf',
-		'Dwarf',
-		'Gnome',
-		'Orcs',
-		'Dark Elf',
-		'Goblin',
-		'Demon',
-	),
-	'factions' => array(
-		'Member',
-	),
+		0	=> 'Unknown',
+		1	=> 'Human',
+		2	=> 'Elf',
+		3	=> 'Dwarf',
+		4	=> 'Gnome',
+		5	=> 'Orcs',
+		6	=> 'Dark Elf',
+		7	=> 'Goblin',
+		8	=> 'Demon',
+	)
 	'lang' => array(
-		'shakesfidget' => 'Shakes & Fidget',
+		'shakesfidget'				=> 'Shakes & Fidget',
 		
 		// Profile information
-		'uc_gender'						=> 'Gender',
-		'uc_male'						=> 'Male',
-		'uc_female'						=> 'Female',
-		'uc_guild'						=> 'Guild',
+		'uc_gender'					=> 'Gender',
+		'uc_male'					=> 'Male',
+		'uc_female'					=> 'Female',
+		'uc_guild'					=> 'Guild',
 	),
 );
 ?>
