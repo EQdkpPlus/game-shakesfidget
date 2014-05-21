@@ -21,7 +21,7 @@ $english_array = array(
 		6	=> 'Dark Elf',
 		7	=> 'Goblin',
 		8	=> 'Demon',
-	)
+	),
 	'lang' => array(
 		'shakesfidget'				=> 'Shakes & Fidget',
 		
