@@ -21,7 +21,7 @@ $german_array = array(
 		6	=> 'Dunkelelfen',
 		7	=> 'Goblins',
 		8	=> 'Dämonen'
-	)
+	),
 	'lang' => array(
 		'shakesfidget'				=> 'Shakes & Fidget',
 		
