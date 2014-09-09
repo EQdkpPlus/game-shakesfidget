@@ -89,7 +89,8 @@ if(!class_exists('shakesfidget')) {
 					'lang'			=> 'uc_gender',
 					'options'		=> array('Male' => 'uc_male', 'Female' => 'uc_female'),
 					'undeletable'	=> true,
-					'visible'		=> true
+					'visible'		=> true,
+					'tolang'		=> true
 				),
 				'guild'	=> array(
 					'type'			=> 'text',
