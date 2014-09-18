@@ -96,7 +96,7 @@ if(!class_exists('shakesfidget')) {
 					'type'			=> 'text',
 					'category'		=> 'character',
 					'lang'			=> 'uc_guild',
-					'size'			=> 40,
+					'size'			=> 32,
 					'undeletable'	=> true,
 					'visible'		=> true	
 				),
