@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('shakesfidget')) {
 	class shakesfidget extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '2.1';
+		public $version				= '2.2.0';
 		protected $this_game		= 'shakesfidget';
 		protected $types			= array('classes', 'races', 'filters');
 		protected $classes			= array();
